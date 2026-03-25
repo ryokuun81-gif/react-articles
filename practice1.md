@@ -33,7 +33,7 @@ console.log(userName); // "Tanaka"
 
 配列の場合、名前という概念がないため、**「書いた順番」に値が割り当てられます。受け側の名前は何でも自由に決めてOK**です。
 
-JavaScript
+```JavaScript
 
 const colors \= \["red", "blue", "green"\];
 
