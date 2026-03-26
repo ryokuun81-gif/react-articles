@@ -82,10 +82,12 @@ C: 1人
 あなたの回答を貼ってください。
 書けたら添削して、次は **Q2: active / inactive ごとに人数集計** に進みます。
 
+<details>
+<summary>クリックでコード表示</summary>
 
 ```javascript
-
 import { useState } from "react";
+
 const initialUsers = [
   { id: 1, name: "Taro", active: true, group: "A", score: 80 },
   { id: 2, name: "Hanako", active: false, group: "B", score: 90 },
@@ -97,22 +99,23 @@ const initialUsers = [
 export default function App() {
   const [users, setUsers] = useState(initialUsers);
 
-  const groupCounts = users.reduce((acc, cur)=>{
+  const groupCounts = users.reduce((acc, cur) => {
     const key = cur.group;
     acc[key] = (acc[key] || 0) + 1;
     return acc;
-  }, {})
+  }, {});
 
-  return(
+  return (
     <>
       <ul>
-          {Object.entries(groupCounts).map(([group, count])=>
-            <li key={group}>{group}-{count}人</li>
-          )}
-      </ul>    
-    
+        {Object.entries(groupCounts).map(([group, count]) => (
+          <li key={group}>
+            {group}-{count}人
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
 ```
-
+</details> ```
