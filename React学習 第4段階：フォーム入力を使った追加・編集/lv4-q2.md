@@ -97,11 +97,10 @@ const age = Number(inputAge);
 ---
 
 
-```javascript
 あなたのコードを書いて貼ってください。
 
 
-
+```javascript
 import { useState } from "react";
 
 const initialUsers = [
